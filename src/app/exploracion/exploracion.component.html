@@ -2,7 +2,7 @@
   <h1>planetas</h1>
   <div *ngFor="let planet of planetas">
   	
-    <a routerLink="/planetas/{{planet.name}}">{{planet.name}}</a>
+    <button (click)="selectPlanet(planet)">{{planet.name}}</button>
   </div>
 </div>
 <app-fuselaje></app-fuselaje>

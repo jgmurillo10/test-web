@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlanetasService } from '../planetas.service';
 
 @Component({
   selector: 'app-fuselaje',
@@ -8,8 +9,24 @@ import { Component, OnInit } from '@angular/core';
 export class FuselajeComponent implements OnInit {
   message: string;
   planeta = 'X';
-  grados = 'Y'
-  constructor() { }
+  grados = 'Y';
+  img = '';
+  subscription: Subscription;
+
+  constructor(private planetasService: PlanetasService) {
+    this.subscription = planetasService.planetAnnounced$.subscribe(
+      planet => {
+        this.handleSelection(planet);
+      }
+    )
+  }
+  
+  handleSelection(planet) {
+    this.planeta = planet.name;
+    this.grados = planet.degrees;
+    this.img = planet.img;
+    this.getMessage();
+  }
 
   ngOnInit() {
     this.getMessage();

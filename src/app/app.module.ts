@@ -12,6 +12,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { ControlComponent } from './control/control.component';
 import { ExploracionComponent } from './exploracion/exploracion.component';
 import { PlanetaComponent } from './planeta/planeta.component';
+import { FormatDegreesPipe } from './format-degrees.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PlanetaComponent } from './planeta/planeta.component';
     InicioComponent,
     ControlComponent,
     ExploracionComponent,
-    PlanetaComponent
+    PlanetaComponent,
+    FormatDegreesPipe
   ],
   imports: [
     BrowserModule,

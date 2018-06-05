@@ -36,4 +36,8 @@ export class ExploracionComponent implements OnInit {
 		this.planetas = arr;
  	}
 
+ 	selectPlanet(planet) {
+ 		this.planetasService.announcePlanet(planet);
+ 	}
+
 }

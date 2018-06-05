@@ -39,3 +39,9 @@
     text-shadow: 0px 0px 20px #FFF;
     font-size: 24px;
 }
+
+.img-planet {
+    border: 1px solid black;
+    position: absolute;
+    z-index: -1;
+}
