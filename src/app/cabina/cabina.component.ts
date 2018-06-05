@@ -38,8 +38,10 @@ export class CabinaComponent implements OnInit {
     ).subscribe((v) => this.counter = v)
   }
   resetCounter() {
-    this.counterSubscription.unsubscribe();
-    this.counter = this.time;
+    if(this.counterSubscription) {
+      this.counterSubscription.unsubscribe();
+      this.counter = this.time;
+    }
   }
   ngOnInit() {
   }

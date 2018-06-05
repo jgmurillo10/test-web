@@ -43,7 +43,13 @@
 }
 
 .img-planet {
-    border: 1px solid black;
+    /*border: 1px solid white;*/
+    width: 100%;
     position: absolute;
+    top: 25vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
     z-index: -1;
 }
