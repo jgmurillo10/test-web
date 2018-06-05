@@ -1,26 +1,30 @@
 
 .motor {
-    height: 100%;
-    width: 100%;
+    position: absolute;
+    top:8vh;
+    left:0;
+    height: 92vh;
+    width: 50%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .round-button {
     display:block;
-    width:200px;
-    height:200px;
-    line-height:200px;
-    border: 2px solid #f5f5f5;
+    width:100px;
+    height:100px;
+    border: 2px solid #858585;
     border-radius: 50%;
-    color:#f5f5f5;
+    color:#fff;
     text-align:center;
     text-decoration:none;
-    background: #ff4747;
+    background: #DD2D2D;
     box-shadow: 0 0 3px gray;
     font-size:20px;
-    font-weight:bold;
+    font-weight:100;
+    cursor: pointer;
+    margin-right: 10%;
 }
 .round-button:hover {
     background-color: crimson;

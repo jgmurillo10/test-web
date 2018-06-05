@@ -6,29 +6,37 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav {
+	background-color: rgba(0,0,0,0.01);
+	height: 5vh;
+	margin-bottom: 3em;
 }
 
 li {
-    float: left;
-    border-right:1px solid #bbb;
-}
-
-li:last-child {
-    border-right: none;
-}
-
-li a {
-    display: block;
-    color: white;
+	letter-spacing: 4px;
+    /*display: block;*/
+    color: black;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    margin: 1em;
+   
+    background-color: rgba(0,0,0,0.05);
+    width: 50%;
+}
+
+a {
+	display: block;
+	text-decoration: none;
+	padding: 1em;
+	color: black;
 }
 
 li a:hover:not(.active) {
-    background-color: #111;
+    background-color: rgba(248, 218, 81, 0.7);
+    color: white;
 }
 
 .active {
