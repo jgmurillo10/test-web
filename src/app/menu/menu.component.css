@@ -11,7 +11,7 @@ ul {
 }
 
 nav {
-	background-color: rgba(0,0,0,0.01);
+	background-color: rgba(255,255,255,0.05);
 	height: 5vh;
 	margin-bottom: 3em;
 }
@@ -23,7 +23,7 @@ li {
     text-align: center;
     margin: 1em;
    
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(255,255,255,0.1);
     width: 50%;
 }
 
@@ -31,12 +31,12 @@ a {
 	display: block;
 	text-decoration: none;
 	padding: 1em;
-	color: black;
+	color: white;
 }
 
 li a:hover:not(.active) {
-    background-color: rgba(248, 218, 81, 0.7);
-    color: white;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
 }
 
 .active {

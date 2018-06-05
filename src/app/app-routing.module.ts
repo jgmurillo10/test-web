@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'inicio', component: InicioComponent },
   { path: 'control', component: ControlComponent },
   { path: 'planetas', component: ExploracionComponent },
-  { path: 'planetas/:planeta', component: PlanetaComponent }
+  { path: 'planetas/:planeta', component: ExploracionComponent }
 ]
 
 @NgModule({
