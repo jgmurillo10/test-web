@@ -14,25 +14,32 @@ export class CabinaComponent implements OnInit {
   counter = 10;
   time = 10;
   subscription: Subscription;
+  counterSubscription: Subscription;
 
   constructor(private contadorService: ContadorService) {
     this.subscription = contadorService.timerAnnounced$.subscribe(
       start => {
-        this.counter = 10;
-        this.startCounter(start);
+        this.handleCounter(start);
       }
     )
   }
-  startCounter(start) {
-    console.log(start)
+  handleCounter(start) {
+    if(start) {
+      this.startCounter();
+    } else {
+      this.resetCounter();
+    }
+  }
+  startCounter() {
     if(this.counter != 0 && this.counter != this.time) { return; }
-    this.secondsCounter.pipe(
+    this.counterSubscription = this.secondsCounter.pipe(
       take(this.time),
       map((v)=>(this.time-1)-v)
     ).subscribe((v) => this.counter = v)
   }
   resetCounter() {
-    
+    this.counterSubscription.unsubscribe();
+    this.counter = this.time;
   }
   ngOnInit() {
   }
