@@ -6,7 +6,7 @@ En esta applicación web puedes encontrar tanto un menu como tres vistas princip
 - control
 - planetas
 
-En cada una de ella tienes una funcionalidad diferente. La aplicación está disponible en [http://juanmurillo.me/test-web/dist/web/](http://juanmurillo.me/test-web/dist/web/).
+En cada una de ella tienes una funcionalidad diferente. La aplicación está disponible en [http://juanmurillo.me/test-web/dist/web/index.html](http://juanmurillo.me/test-web/dist/web/index.html).
 
 ## Inicio
 Aquí encontraras la integración de 3 vistas: fuselaje, motor y cabina. No se tiene la función de ignición.
