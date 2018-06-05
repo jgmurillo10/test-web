@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FuselajeComponent implements OnInit {
   message: string;
+  planeta = 'X';
+  grados = 'Y'
   constructor() { }
 
   ngOnInit() {
@@ -14,7 +16,7 @@ export class FuselajeComponent implements OnInit {
   }
 
   getMessage(): void {
-    this.message = 'Planeta X avistado a Y grados';
+    this.message = `Planeta ${this.planeta} avistado a ${this.grados} grados`;
   }
 
 }

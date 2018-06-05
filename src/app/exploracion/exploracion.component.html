@@ -1,5 +1,8 @@
-<h1>planetas</h1>
-<div *ngFor="let planet of planets">
-	
-  <a routerLink="/planetas/{{planet}}">{{planet}}</a>
+<div class="exploracion">
+  <h1>planetas</h1>
+  <div *ngFor="let planet of planetas">
+  	
+    <a routerLink="/planetas/{{planet.name}}">{{planet.name}}</a>
+  </div>
 </div>
+<app-fuselaje></app-fuselaje>

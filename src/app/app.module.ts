@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { FuselajeComponent } from './fuselaje/fuselaje.component';
@@ -26,7 +27,9 @@ import { PlanetaComponent } from './planeta/planeta.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
