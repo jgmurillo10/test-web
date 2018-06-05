@@ -11,6 +11,7 @@ import { PlanetasService } from '../planetas.service';
 export class ExploracionComponent implements OnInit {
 	planets = ["mercurio", "venus", "tierra"];
 	planetas;
+	selectedPlanet;
   constructor(
   	private route: ActivatedRoute,
   	private location: Location,
@@ -52,6 +53,7 @@ export class ExploracionComponent implements OnInit {
  	}
 
  	selectPlanet(planet) {
+ 		this.selectedPlanet = planet;
  		this.planetasService.announcePlanet(planet);
  		// go to url
  		this.location.go(`/planetas/${planet.name}`);

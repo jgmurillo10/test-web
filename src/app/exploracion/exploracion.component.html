@@ -2,7 +2,7 @@
   <h1>planetas</h1>
   <div *ngFor="let planet of planetas">
   	
-    <button (click)="selectPlanet(planet)">{{planet.name}}</button>
+    <button [class.selected]="planet === selectedPlanet" (click)="selectPlanet(planet)">{{planet.name}}</button>
   </div>
 </div>
 <app-fuselaje></app-fuselaje>
