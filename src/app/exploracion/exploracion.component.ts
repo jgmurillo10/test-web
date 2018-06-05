@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-exploracion',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exploracion.component.css']
 })
 export class ExploracionComponent implements OnInit {
-
-  constructor() { }
+	planets = ["mercurio", "venus", "tierra"];
+  constructor(
+  	private location: Location
+  ) { }
 
   ngOnInit() {
+
   }
+
+ 
 
 }

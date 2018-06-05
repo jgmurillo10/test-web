@@ -10,6 +10,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { InicioComponent } from './inicio/inicio.component';
 import { ControlComponent } from './control/control.component';
 import { ExploracionComponent } from './exploracion/exploracion.component';
+import { PlanetaComponent } from './planeta/planeta.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ExploracionComponent } from './exploracion/exploracion.component';
     MenuComponent,
     InicioComponent,
     ControlComponent,
-    ExploracionComponent
+    ExploracionComponent,
+    PlanetaComponent
   ],
   imports: [
     BrowserModule,

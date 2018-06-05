@@ -1,5 +1,7 @@
-<nav id="menu">
-  <a routerLink="/inicio">inicio</a> 
-  <a routerLink="/control">control</a> 
-  <a routerLink="/exploracion">exploracion</a> 
+<nav>
+  <ul>
+    <li *ngFor="let route of routes">
+      <a [class.active]="route === selectedRoute" routerLink="/{{route}}">{{route | uppercase }}</a> 
+    </li>
+  </ul>
 </nav>
