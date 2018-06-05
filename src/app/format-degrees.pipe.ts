@@ -9,11 +9,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 */
 @Pipe({name: 'formatDegrees'})
 export class FormatDegreesPipe implements PipeTransform {
-  transform(value: number): number {
-    let exp = parseFloat(value).toFixed(4);
-    if (isNaN(exp)) {
-    	return value;
-    }
-    return exp;
+  transform(value: string): string {
+    let exp: string = parseFloat(value).toFixed(4) + '';
+      return exp;
   }
 }

@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
+import { Response } from './response';
+import { Planeta } from './planeta';
 
 @Injectable({
   providedIn: 'root'
@@ -10,19 +12,19 @@ export class PlanetasService {
   constructor(private http: HttpClient) { }
 
   getPlanetas() {
-    return this.http.get(this.url);
+    return this.http.get<Response>(this.url);
   }
 
-   // Observable any sources
-  private planetAnnouncedSource = new Subject<any>();
+   // Observable Planeta sources
+  private planetAnnouncedSource = new Subject<Planeta>();
 
-  // Observable any streams
+  // Observable Planeta streams
 
   planetAnnounced$ = this.planetAnnouncedSource.asObservable();
 
-  // service  any commands
+  // service  Planeta commands
 
-  announcePlanet(planet: any) {
+  announcePlanet(planet: Planeta) {
     console.log(planet);
     this.planetAnnouncedSource.next(planet);
   }

@@ -13,7 +13,7 @@ export class MotorComponent implements OnInit {
   routeName: string;
 
   constructor(
-  	private contadorService: ContadorService
+  	private contadorService: ContadorService,
   	private route: ActivatedRoute,
   	private location: Location
   ) { }
@@ -22,7 +22,8 @@ export class MotorComponent implements OnInit {
     this.setRoute();
   }
   setRoute(): void {
-    this.routeName = this.route.url.getValue()[0].path;
+    this.route.url
+      .subscribe(routeName => this.routeName = routeName[0].path);
   }
   ignite() {
     if(this.routeName === 'inicio')  {return;}

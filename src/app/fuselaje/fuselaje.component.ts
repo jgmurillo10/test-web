@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlanetasService } from '../planetas.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-fuselaje',
@@ -9,7 +10,7 @@ import { PlanetasService } from '../planetas.service';
 export class FuselajeComponent implements OnInit {
   message: string;
   planeta = 'X';
-  grados = 'Y';
+  grados = 0;
   img = '';
   subscription: Subscription;
 

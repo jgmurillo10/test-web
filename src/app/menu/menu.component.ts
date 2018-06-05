@@ -20,13 +20,13 @@ export class MenuComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-  	
+
   	this.getSelectedRoute();
   }
 
   getSelectedRoute(): void {
   	console.log('getSelectedroute')
-  	this.selectedRoute = this.route.url.getValue()[0].path;;
+  	//this.selectedRoute = this.route.url.getValue()[0].path;;
   	console.log(this.selectedRoute)
   }
 

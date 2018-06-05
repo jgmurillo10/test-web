@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { PlanetasService } from '../planetas.service';
+import { Planeta } from '../planeta';
 
 @Component({
   selector: 'app-exploracion',
@@ -9,9 +10,8 @@ import { PlanetasService } from '../planetas.service';
   styleUrls: ['./exploracion.component.css']
 })
 export class ExploracionComponent implements OnInit {
-	planets = ["mercurio", "venus", "tierra"];
-	planetas;
-	selectedPlanet;
+	planetas: Planeta[];
+	selectedPlanet: Planeta;
   constructor(
   	private route: ActivatedRoute,
   	private location: Location,
@@ -20,7 +20,6 @@ export class ExploracionComponent implements OnInit {
 
   ngOnInit() {
   	this.getPlanetas();
-  	//this.loadPlanet();
   }
 
  	getPlanetas(): void {
@@ -31,7 +30,6 @@ export class ExploracionComponent implements OnInit {
  	loadPlanet(): void {
  		// if url has planet -> selectPlanet(iterate over this.planetas)
  		const name = this.route.snapshot.paramMap.get('planeta');
- 		console.log(name)
  		if(name) {
  			let selected = this.planetas.filter(d => d.name == name);
  			if(selected.length != 0) { this.selectPlanet(selected[0]) }
@@ -42,10 +40,7 @@ export class ExploracionComponent implements OnInit {
  	setPlanetas(images) {
  		let arr = [];
  		Object.keys(images).forEach((key,index) => {
-		    let planeta = {};
-		    planeta.name = key;
-		    planeta.img = images[key].img;
-		    planeta.degrees = +images[key].degrees;
+		    let planeta = { name: key, img: images[key].img, degrees: +images[key].degrees } as Planeta;
 		    arr.push(planeta);
 		});
 		this.planetas = arr;
