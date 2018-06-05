@@ -1,27 +1,20 @@
-# Web
+# Prueba técnica 3 Astronautas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
+En esta applicación web puedes encontrar tanto un menu como tres vistas principales:
 
-## Development server
+- inicio
+- control
+- planetas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+En cada una de ella tienes una funcionalidad diferente. La aplicación está disponible en [http://juanmurillo.me/test-web/dist/web/](http://juanmurillo.me/test-web/dist/web/).
 
-## Code scaffolding
+## Inicio
+Aquí encontraras la integración de 3 vistas: fuselaje, motor y cabina. No se tiene la función de ignición.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Control
 
-## Build
+En control puedes hacer ignición de tu cohete. Resetear el contador para volver a iniciar una cuenta regresiva desde 10.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Planetas
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Aquí podrás ver los planetas y saber a cuántos grados estás. Dispones de un componente en el costado izquierdo que te permite una mejor navegabilidad. En caso de que sepas qué planeta avistar simplemente accede  a la subruta /planetas/:nombrePlaneta
